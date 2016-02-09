@@ -1,0 +1,50 @@
+#map-canvas img {
+    max-width: NONE;
+}
+#map_canvas{
+    width: 80% !important;
+    margin: 0 auto;
+}
+#header {
+    text-align: center;
+    width: 100%;
+    margin: 100px, 100px;
+    height: auto;
+    width: auto\9;
+    padding: 0 10%;
+    box-sizing: border-box
+}
+#header img{
+    width: 100%;
+}
+.nav{
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+li {
+    float: left;
+    
+}
+
+li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration-color: blueviolet;
+}
