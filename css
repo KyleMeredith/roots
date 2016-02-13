@@ -17,34 +17,55 @@
 #header img{
     width: 100%;
 }
-.nav{
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+ 
+.nav ul {
+  background-color: #fff;
+  text-align: center;
+  padding: 0;
+  margin: 20;
+}
+.nav li {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  height: 40px;
+  padding: 0px 150px;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #999;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  color: #7852a7;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+.nav li {
+  display: inline-block;
+  margin-right: -4px;
+  }
+
+.gallery li{
     width: 80%;
     margin: 0 auto;
-    display: block;
-}
-
-ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #fff;
-
-}
-
-li {
-    float: left;
     
 }
 
-li a {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 15px;
-    text-decoration: none;
-}
-
-li a:hover {
-    text-decoration-color: blueviolet;
+.gallery{
+    padding: 50px;
 }
