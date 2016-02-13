@@ -4,39 +4,60 @@
 
 <head>
     <link rel="stylesheet" href="main.css"> 
-
-        
+    <link rel="stylesheet" href="flexslider.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
 
 <title>Heart and Soy</title>
 
 <div id="header">
-    <a href="#"><img src = "Roots-Top-Picture-Skinny.png"></a>
+    <a href="index.html"><img src = "Roots-Top-Picture-Skinny.png"></a>
 </div>
-
-<div class="nav">
-    <ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="news.asp">News</a></li>
-  <li><a href="contact.asp">Contact</a></li>
-  <li><a href="about.asp">About</a></li>
-</ul>
+    
+    <div class="nav">
+      <ul>
+        <li class="home"><a href="#">Home</a></li>
+        <li class="about"><a href="#">About</a></li>
+        <li class="news"><a href="#">Newsletter</a></li>
+        <li class="contact"><a href="#">Contact</a></li>
+      </ul>
     </div>
+    
+    
+
 </head>
     
 
 <body>
 
+<div class="flexslider">
+  <ul class="slides">
+        <li><img src="Slide Show/Full Photos/1 full.png"></li>
+        <li><img src="Slide Show/Full Photos/2 full.png"></li>
+        <li><img src="Slide Show/Full Photos/3 full.png"></li>
+        <li><img src="Slide Show/Full Photos/4 full.png"></li>
+        <li><img src="Slide Show/Full Photos/5 full.png"></li>
+        <li><img src="Slide Show/Full Photos/6 full.png"></li>
+        <li><img src="Slide Show/Full Photos/7 full.png"></li>
+        <li><img src="Slide Show/Full Photos/8 full.png"></li>
+  </ul>
+</div>
 </body>
 
 <footer>
     
     <body onload="initialize()">
-        <div id="map_canvas" style="width:800px; height:500px"></div>
+        <div id="map_canvas" style="width:800px; height:300px"></div>
     </body>
     
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="java.js"></script>
+    <script type="text/javascript" src="map.js"></script>
 
 
 
