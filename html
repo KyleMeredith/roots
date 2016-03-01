@@ -5,13 +5,7 @@
 <head>
     <link rel="stylesheet" href="main.css"> 
     <link rel="stylesheet" href="flexslider.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="jquery.flexslider.js"></script>
-    <script type="text/javascript" charset="utf-8">
-    $(window).load(function() {
-    $('.flexslider').flexslider();
-  });
-</script>
+ 
 
 <title>Heart and Soy</title>
 
@@ -27,8 +21,21 @@
 </head>
     
 
-<body>
+<body  onload="initialize()">
 
+   
+    
+<div class="gallery">
+    <div class="horizontal">
+        <span class="line"></span>
+        <div class="textDiv">
+            <div class="textspan">
+                <p class="text">Gallery</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
 <div class="flexslider">
   <ul class="slides">
         <li><img src="Slide Show/Full Photos/1 full.png"></li>
@@ -41,10 +48,48 @@
         <li><img src="Slide Show/Full Photos/8 full.png"></li>
   </ul>
 </div>
-</body>
-
+    
+    <p id="menu" align="center">Heart and Soy : Menu</p>
+    
+    <div class="heartandsoymenu">
+        <ul id="heartandsoymenu">
+        <li>Fried Tofu Squares w/ Tamarind Sauce (v)(gf)<em> 3.50 </em></li>
+        <li>Steamed bun w/ Spicy Sauce<em>3.50 </em></li>
+        <li>Egg Rolls (2) w/ Sweet & Sour Sauce (v)<em> 3.50 </em></li>
+        <li>Spring Rolls (2) w/ Peanut Sauce (v)(gf)<em> 4.50 </em></li>
+        <li>Jicama Rolls (2) (v)(gf)<em> 5.50 </em></li>
+        <li>Sweet Rice Balls (v)<em> 5.50 </em></li>
+        <li>Cantonese Egg Noodle Lo Mein<em>8.50 </em></li>
+        <li>Vietnamese Rice Noodle Salad (v)(gf)<em>7.50 </em></li>
+        <li>Pad Thai (v)(gf)<em> 8.50 </em></li>
+        <li>Singapore Noodles (v)(gf)<em> 8.50 </em></li>
+        <li>Korean Cellophane Noodles (v)(gf)<em>8.50 </em></li>
+        <li>Quang's Traditional Yellow Noodles (v)(gf)<em> 7.50 </em></li>
+        <li>Vegetable Fried Rice (v)(gf)<em> 7.50 </em></li>
+        <li>Curry Fried Rice (v)(gf)<em> 7.50 </em></li>
+        <li>Korean Rice Bowl w/ Fried Egg(v)(gf)<em>8.50 </em></li>
+        <li>BBQ Tofu & Rice (v)<em> 8.50 </em></li>
+        <li>Vietnamese Sandwich (v)<em> 5.50/6.00 Vegan</em></li>
+        <li>Yellow Curry Soup (v)(gf)<em> 6.50 </em></li>
+        <li>Pho  - Traditional Flat Noodle Soup (v)(gf)<em> 6.50 </em></li>
+        <li>Hue  - Spicy Noodle Soup (v)(gf)<em>6.50 </em></li>
+        <li>Garden Salad - (v)<em>4.00 sm/7.50 lg </em></li>
+        <li>Heart and Soy Gyro W/ Wasabi Tzatziki Sauce<em>6.95</em></li>
+        <li>Sub Brown Rice in any Rice Dish<em>1.00</em></li>
+        <li>Extra Vegetables/Noodles/Tofu<em>2.00</em></li>
+        <li>Side of White or Brown Rice<em>2.00</em></li>
+        
+        
+        </ul>
+    </div>
+    
+        
+    <p id="menu" align="center">Roots : Menu</p>
+    <a href="#0" class="cd-top">Top</a>
 <footer>
-    <div class ="hours">
+    
+<div class="flex-container">
+    <div class ="flex-item">
         <ul style="text-align: center">
             <li style="font-weight: bold" >HOURS</li>
             <li>Monday / Friday: 11:00 AM to 10:00 PM</li>
@@ -52,34 +97,37 @@
             <li>Sunday: 12:00 PM to 8:00 PM</li>
         </ul>
     </div>
-    <div class ="phone">
+    <div class ="flex-item">
         <ul style="text-align: center">
             <li style="font-weight: bold" >PHONE</li>
             <li>Heart and Soy / Carryout / Catering: 502-452-6678</li>
             <li>Roots / Reservations: 502-452-6688</li>
         </ul>
     </div>
-    <div class ="address">
+    <div class ="flex-item">
         <ul style="text-align: center">
             <li style="font-weight: bold" >ADDRESS</li>
             <li>1216 Bardstown Road Louisville, KY 40204</li>
         </ul>
     </div>
-    <body onload="initialize()">
-        <div id="map_canvas"></div>
-    </body>
+</div>
+        
+    <div id="map_canvas"></div>
     
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="map.js"></script>
-
-
 
 
 </footer>
-
-</html>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="jquery.flexslider.js"></script>
+    <script type="text/javascript" src="java.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript"> $(window).load(function() {
+    $('.flexslider').flexslider();
+    console.log("my name");
+    });</script>
+</body>
 
 
 
