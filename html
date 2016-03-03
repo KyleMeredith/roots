@@ -4,10 +4,12 @@
 
 <head>
     <link rel="stylesheet" href="main.css"> 
-    <link rel="stylesheet" href="flexslider.css" type="text/css">
+    <link rel="stylesheet" href="flexslider.css">
+    <link rel="stylesheet" href="normalize.css">
  
 
 <title>Heart and Soy</title>
+</head>
 
     <div class="nav">
       <ul>
@@ -18,7 +20,7 @@
       </ul>
     </div>
 
-</head>
+
     
 
 <body  onload="initialize()">
@@ -49,43 +51,137 @@
   </ul>
 </div>
     
-    <p id="menu" align="center">Heart and Soy : Menu</p>
+    <div class="gallery">
+    <div class="horizontal">
+        <span class="line"></span>
+        <div class="textDiv">
+            <div class="textspan">
+                <p class="text">Menu</p>
+            </div>
+        </div>
+    </div>
+</div>
     
-    <div class="heartandsoymenu">
-        <ul id="heartandsoymenu">
-        <li>Fried Tofu Squares w/ Tamarind Sauce (v)(gf)<em> 3.50 </em></li>
-        <li>Steamed bun w/ Spicy Sauce<em>3.50 </em></li>
-        <li>Egg Rolls (2) w/ Sweet & Sour Sauce (v)<em> 3.50 </em></li>
-        <li>Spring Rolls (2) w/ Peanut Sauce (v)(gf)<em> 4.50 </em></li>
-        <li>Jicama Rolls (2) (v)(gf)<em> 5.50 </em></li>
-        <li>Sweet Rice Balls (v)<em> 5.50 </em></li>
-        <li>Cantonese Egg Noodle Lo Mein<em>8.50 </em></li>
-        <li>Vietnamese Rice Noodle Salad (v)(gf)<em>7.50 </em></li>
-        <li>Pad Thai (v)(gf)<em> 8.50 </em></li>
-        <li>Singapore Noodles (v)(gf)<em> 8.50 </em></li>
-        <li>Korean Cellophane Noodles (v)(gf)<em>8.50 </em></li>
-        <li>Quang's Traditional Yellow Noodles (v)(gf)<em> 7.50 </em></li>
-        <li>Vegetable Fried Rice (v)(gf)<em> 7.50 </em></li>
-        <li>Curry Fried Rice (v)(gf)<em> 7.50 </em></li>
-        <li>Korean Rice Bowl w/ Fried Egg(v)(gf)<em>8.50 </em></li>
-        <li>BBQ Tofu & Rice (v)<em> 8.50 </em></li>
-        <li>Vietnamese Sandwich (v)<em> 5.50/6.00 Vegan</em></li>
-        <li>Yellow Curry Soup (v)(gf)<em> 6.50 </em></li>
-        <li>Pho  - Traditional Flat Noodle Soup (v)(gf)<em> 6.50 </em></li>
-        <li>Hue  - Spicy Noodle Soup (v)(gf)<em>6.50 </em></li>
-        <li>Garden Salad - (v)<em>4.00 sm/7.50 lg </em></li>
-        <li>Heart and Soy Gyro W/ Wasabi Tzatziki Sauce<em>6.95</em></li>
-        <li>Sub Brown Rice in any Rice Dish<em>1.00</em></li>
-        <li>Extra Vegetables/Noodles/Tofu<em>2.00</em></li>
-        <li>Side of White or Brown Rice<em>2.00</em></li>
-        
-        
-        </ul>
+    <p id="menu" align="center">Heart and Soy</p>
+    
+    <div class="menuDiv">
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Fried Tofu Squares w/ Tamarind Sauce</label><span>3.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Steamed bun w/ Spicy Sauce</label><span>3.50</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Egg Rolls (2) w/ Sweet & Sour Sauce</label><span>3.50 (v)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Spring Rolls (2) w/ Peanut Sauce</label><span>4.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Jicama Rolls (2)</label><span>5.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Sweet Rice Balls</label><span>5.50 (v)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Cantonese Egg Noodle Lo Mein</label><span>8.50</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Vietnamese Rice Noodle Salad</label><span>7.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Pad Thai</label><span>8.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Singapore Noodles</label><span>8.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Korean Cellophane Noodles</label><span>8.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Quang's Traditional Yellow Noodles</label><span>7.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Vegetable Fried Rice</label><span>7.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Curry Fried Rice</label><span>7.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Korean Rice Bowl w/ Fried Egg</label><span>8.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>BBQ Tofu & Rice</label><span>8.50</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Vietnamese Sandwich</label><span> 5.50/6.00 (v)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Yellow Curry Soup</label><span>6.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Pho  - Traditional Flat Noodle Soup</label><span>6.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Hue  - Spicy Noodle Soup</label><span>6.50 (v)(gf)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Garden Salad</label><span>4.00 sm/7.50 lg (v)</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Heart and Soy Gyro W/ Wasabi Tzatziki Sauce</label><span>6.95</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Sub Brown Rice in any Rice Dish</label><span>1.00</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Extra Vegetables/Noodles/Tofu</label><span>2.00</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Side of White or Brown Rice</label><span>2.00</span>
+        </li>
+
     </div>
     
         
-    <p id="menu" align="center">Roots : Menu</p>
-    <a href="#0" class="cd-top">Top</a>
+    <p id="menu" align="center">Roots</p>
+    
+    <div class="gallery">
+    <div class="horizontal">
+        <span class="line"></span>
+        <div class="textDiv">
+            <div class="textspan">
+                <p class="text">Contact</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <footer>
     
 <div class="flex-container">
@@ -118,6 +214,7 @@
 
 
 </footer>
+    <a href="#0" class="cd-top">Top</a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="jquery.flexslider.js"></script>
     <script type="text/javascript" src="java.js"></script>
