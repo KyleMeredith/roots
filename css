@@ -2,11 +2,7 @@ head{
     margin-bottom: 20px;
 }
 
-#map-canvas img {
-    max-width: NONE;
-}
 #map_canvas{
-    width: 100%;
     height: 300px;
     margin: 0 auto;
 }
@@ -22,9 +18,10 @@ p#menu {
 }
 
 .menuDiv{
-    
-    margin-left: 25%;
-    margin-right: 25%;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 li {
@@ -116,7 +113,7 @@ img {
 .topPicture{
     background-image: url(Roots-Top-Picture.png);
     min-height: 1113px;
-    max-width: 100%;
+    min-width: 100%;
 }
 
 .nav ul {
@@ -278,6 +275,19 @@ footer ul{
         background-image:url(Roots-Top-Picture-Mobile.png);
         min-height: 500px;
     }
-
+    .nav ul{
+        text-align: center;
+    }
+    .nav li{
+        padding: 0px 30px;
+    }
+    .menuDiv{
+        font-size: 12px;
+    }
 }
-
+@media only screen and (max-width: 800px){
+    .menuDiv{
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
