@@ -1,677 +1,283 @@
-<!DOCTYPE html>
+head{
+    margin-bottom: 20px;
+}
 
-<html>
+#map-canvas img {
+    max-width: NONE;
+}
+#map_canvas{
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+}
 
-<head>
-    <link rel="stylesheet" href="main.css"> 
-    <link rel="stylesheet" href="flexslider.css">
-    <link rel="stylesheet" href="normalize.css">
+p#menu {
+    font-size: 24px;
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-style: normal;
+    font-weight: 400;
+    width: auto;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+}
+
+.menuDiv{
+    
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+li {
+    list-style:none;    
+    overflow:hidden;
+    padding:5px 0;
+    position:relative;
+
+}
+
+li label {
+    float:left;
+    background:#fff;
+    padding-right:10px;
+
+}
+
+li span {
+    float:right;
+    background:#fff;
+    padding-left:10px;
+
+}
+
+.dotted-bg {
+    border-top:dotted 2px #ccc;
+    position:absolute;   
+    top:15px;
+    left:0;
+    width:100%;
+    z-index:-1;
+
+}
+
+.contactForm{
+    padding: 40px;
+}
+
+.form{
+    width: 25%;
+    margin:0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+	border: 1px solid #E5E5E5;
+	width: 200px;
+	color: #999999;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;		
+}
+
+textarea {
+    width: 400px;
+	height: 150px;
+	max-width: 400px;
+	line-height: 18px;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: 1px solid #C9C9C9;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+.form label {
+	margin-left: 70px;
+	color: #999999;
+}
+
+.submit input {
+    width: 100px; 
+	height: 40px;
+	background-color: #474E69; 
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;		
+}
+
+img {
+    
+    max-width: 100%;
+}
+
+.topPicture{
+    background-image: url(Roots-Top-Picture.png);
+    min-height: 1113px;
+    max-width: 100%;
+}
+
+.nav ul {
+  text-align: right;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+.nav li {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0px 50px;
+  display: inline-block;
+}
  
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s
+}
+ 
+.nav a:hover {
+  color: #7852a7;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
 
-<title>Heart and Soy</title>
-</head>
-
-    <div class="nav">
-      <ul>
-        <li class="gallery"><a href="#gallery">Gallery</a></li>
-        <li class="menu"><a href="#menu">Menu</a></li>
-        <li class="contact"><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-
-    
-
-<body  onload="initialize()">
-
-   
-    
-<div class="gallery"  id="gallery">
-    <div class="horizontal">
-        <span class="line"></span>
-        <div class="textDiv">
-            <div class="textspan">
-                <p class="text">Gallery</p>
-            </div>
-        </div>
-    </div>
-</div>
-    
-<div class="flexslider">
-  <ul class="slides">
-        <li><img src="Slide Show/Full Photos/1 full.png"></li>
-        <li><img src="Slide Show/Full Photos/2 full.png"></li>
-        <li><img src="Slide Show/Full Photos/3 full.png"></li>
-        <li><img src="Slide Show/Full Photos/4 full.png"></li>
-        <li><img src="Slide Show/Full Photos/5 full.png"></li>
-        <li><img src="Slide Show/Full Photos/6 full.png"></li>
-        <li><img src="Slide Show/Full Photos/7 full.png"></li>
-        <li><img src="Slide Show/Full Photos/8 full.png"></li>
-  </ul>
-</div>
-    
-<div class="gallery" id="menu">
-    <div class="horizontal">
-        <span class="line"></span>
-        <div class="textDiv">
-            <div class="textspan">
-                <p class="text">Menu</p>
-            </div>
-        </div>
-    </div>
-</div>
-    
-    <p id="menu" align="center">Heart and Soy</p>
-    
-    <div class="menuDiv">
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Fried Tofu Squares w/ Tamarind Sauce</label><span>3.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Steamed bun w/ Spicy Sauce</label><span>3.50</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Egg Rolls (2) w/ Sweet &amp; Sour Sauce</label><span>3.50 (v)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Spring Rolls (2) w/ Peanut Sauce</label><span>4.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Jicama Rolls (2)</label><span>5.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Sweet Rice Balls</label><span>5.50 (v)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Cantonese Egg Noodle Lo Mein</label><span>8.50</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Vietnamese Rice Noodle Salad</label><span>7.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Pad Thai</label><span>8.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Singapore Noodles</label><span>8.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Korean Cellophane Noodles</label><span>8.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Quang's Traditional Yellow Noodles</label><span>7.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Vegetable Fried Rice</label><span>7.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Curry Fried Rice</label><span>7.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Korean Rice Bowl w/ Fried Egg</label><span>8.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>BBQ Tofu & Rice</label><span>8.50</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Vietnamese Sandwich</label><span> 5.50/6.00 (v)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Yellow Curry Soup</label><span>6.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Pho  - Traditional Flat Noodle Soup</label><span>6.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Hue  - Spicy Noodle Soup</label><span>6.50 (v)(gf)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Garden Salad</label><span>4.00 sm/7.50 lg (v)</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Heart and Soy Gyro W/ Wasabi Tzatziki Sauce</label><span>6.95</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Sub Brown Rice in any Rice Dish</label><span>1.00</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Extra Vegetables/Noodles/Tofu</label><span>2.00</span>
-        </li>
-        <li>
-            <div class="dotted-bg"></div>    
-            <label>Side of White or Brown Rice</label><span>2.00</span>
-        </li>
-
-    </div>
-    
-        
-    <p id="menu" align="center">Roots</p>
-    
-<div class="menuDiv">
-    <h4>Soups</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Wonton</strong></label> <span>5.50/8.50</span> <br>
-                <label>fresh egg noodles / five spice tofu / scallions</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Pho</strong></label> <span>5.50/8.50</span> <br>
-                <label>traditional Vietnamese noodles / tofu / veggie ham (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Hue</strong></label> <span>5.50/8.50</span> <br>
-                <label>rice noodles / tofu / veggie ham (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Green Curry</strong></label> <span>5.50/8.50</span> <br>
-                <label>tofu / carrots / sweet potatoes / edamame / zucchini / corn / coconut milk (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Fresh uon noodles</strong></label> <span>5.50/8.50</span> <br>
-                <label>tofu / veggie ham / fried shallots / spicy chili broth (V)(GF))</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Butternut squash</strong></label> <span>5.50/8.50</span> <br>
-                <label>red Thai curry / tofu crouton / Greek yogurt (GF</label>
-            </li>
-        </ul>
-    <h4>Salads</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Smoked Caprese</strong></label> <span>7.50</span> <br>
-                <label>Lapsang Souchong infused balsamic vinaigrette</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Ginger poached pear</strong></label> <span>6.50</span> <br>
-                <label>marinated feta / Kentucky mint / citrus vinaigrette (GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Beech mushrooms</strong></label> <span>5.50</span> <br>
-                <label>edamame / creamy miso dressing (GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Green papaya</strong></label> <span>6.50</span> <br>
-                <label>tofu / soy protein / apple / fried shallots / peanuts / paddy herbs / sweet chili vinaigrette (V)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Glass noodles</strong></label> <span>7.50</span> <br>
-                <label>turmeric tofu / Thai basil / peanuts / lettuce / cucumbers / sprouts / pickled daikon / crispy rice noodles (V)</label>
-            </li>
-             <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Red grapefruit</strong></label> <span>6.50</span> <br>
-                <label>avocado / fennel / herbed vinaigrette (V)(GF)</label>
-            </li>
-             <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Bouquet Salad</strong></label> <span>7.50</span> <br>
-                <label>zucchini / spring mix / mint / carrot / red cabbage / creamy miso dressing (V)(GF)</label>
-            </li>
-             <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Thai Salad</strong></label> <span>8.50</span> <br>
-                <label>lettuce / pickled daikon / edamame / roasted peanut / avocado / green &amp; red onion / ginger dressing (V)(GF))</label>
-            </li>
-        </ul>
-    <h4>Savories</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Steamed Edamame</strong></label> <span>4.00</span> <br>
-                <label>steamed fresh soybeans in their pods / sea salt</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Fried oyster mushrooms</strong></label> <span>8.50</span> <br>
-                <label>wasabi aioli</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Crispy rolls</strong></label> <span>6.50</span> <br>
-                <label>crispy egg rolls / green leaf lettuce / mint / Vietnamese Sauce (V)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Cucumber Roll</strong></label> <span>6.50</span> <br>
-                <label>cucumbers / tofu / veggie ham / pickled daikon / basil / tamarind sauce (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Crispy avocado and tomato rolls</strong></label> <span>6.50</span> <br>
-                <label>tamarind sauce / pickled vegetables (V)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Tempura fried seasonal vegetables</strong></label> <span>7.50</span> <br>
-                <label>Wasabi Aioli</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Fried tofu squares</strong></label> <span>4.50</span> <br>
-                <label>tamarind sauce (V)(GF)sa</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Crispy pita chips</strong></label> <span>5.50</span> <br>
-                <label>chickpea and white bean puree / rosemary / toasted almonds / white truffle oil</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Braised beets</strong></label> <span>6.50</span> <br>
-                <label>Beets / Potatoes / yellow curry / coconute milk / shallots (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Sautéed baby spinach</strong></label> <span>4.50</span> <br>
-                <label>lemon / rosemary / olive oil (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Seasonal root vegetables</strong></label> <span>5.50</span> <br>
-                <label>lemon / rosemary / olive oil (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>White beans and cabbage</strong></label> <span>5.50</span> <br>
-                <label>cabbage / spinach / caramelized shallots / asiago cheese</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Steamed rice rolls</strong></label> <span>8.50</span> <br>
-                <label>tofu / mushrooms / carrots / lettuce / sprouts / pickled daikon / Thai basil / fried shallots / vietnamese sauce (V)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Summer rolls</strong></label> <span>7.50</span> <br>
-                <label>sautéed vegetables / tofu / veggie ham / mint / Thai basil / crispy cigar / tamarind sauce (V)(GF)</label>
-            </li>           
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Pan-fried pot stickers</strong></label> <span>5.50</span> <br>
-                <label>tofu / carrots / celery / mushrooms / onions / soy &amp;amp; toasted sesame glaze</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Vietnamese crepe</strong></label> <span>6.50</span> <br>
-                <label>wild mushrooms / onions / sprouts / tofu / veggie ham (V)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Lettuce Wraps</strong></label> <span>6.50</span> <br>
-                <label>crispy rice noodles / tofu / carrots / water chestnuts / wood ear mushrooms / vietnamese sauce (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Wild mushroom &amp; sun-dried tomato paté</strong></label> <span>8.50</span> <br>
-                <label>toasted baguette slices / pickled vegetables</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Steam Banana Leaf</strong></label> <span>8.50</span> <br>
-                <label>rice / tofu / veggie ham / peas / carrot / lotus seeds / fried shallots (V)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Crispy potato nest</strong></label> <span>9.50</span> <br>
-                <label>tofu / veggie ham / seasonal vegetables / brown sauce (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Pan-seared ravioli</strong></label> <span>9.50</span> <br>
-                <label>bleu cheese / boursin cheese / baby spinach / white truffle oil / mushroom soy demi / micro greens</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Forbidden rice risotto</strong></label> <span>9.50</span> <br>
-                <label>baby spinach / black cherries / candied walnuts / goat cheese</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Pan-fried rice noodles</strong></label> <span>9.50</span> <br>
-                <label>seasonal vegetables / tofu / veggie ham / brown sauce (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Japanese eggplant</strong></label> <span>9.50</span> <br>
-                <label>tofu / onions / coconut milk curry sauce (V)(GF</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Tofu clay pot</strong></label> <span>9.50</span> <br>
-                <label> wild mushrooms / onions / cilantro / mushroom soy demi (V</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Vermicelli rice noodles</strong></label> <span>7.50</span> <br>
-                <label> lettuce / cucumbers / sprouts / lemongrass tofu / veggie ham / fried shallots / peanuts (V)(GF)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Grilled Vegetable Wrap</strong></label> <span>9.50</span> <br>
-                <label> Whole wheat wrap / bean puree / turmeric tofu / zucchini / spinach / red pepper / red onion / asparagus / jicama / beets / yam / sauteed cabbage, carrots, celery / sriracha (with cheese - add $2.00) (V)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Roots Fajita</strong></label> <span>9.95</span> <br>
-                <label>tofu / carrot / zucchini / sweet potato / red onion / green onion / cilantro / tomato / sour cream / jalapeno / lettuce / corn tortillas (V)</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Sizzling Sticky Rice</strong></label> <span>9.95</span> <br>
-                <label>BBQ tofu / cucumber / zucchini / celery / red onion / carrot / green onion / cilantro / bed of sticky rice (V)</label>
-            </li>
-                <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Extra Vegetables/Noodles/Tofu</strong></label> <span>2.00</span> <br>
-            </li>    
-    </ul>
-
-
-    <h4>Estate Teas</h4>
-    <h4>Blacks</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>[Assam] Borengajuli Estate (FBOP), Second Flush, India</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Himalayan Mountain Tips (TGFOP), First Flush, Nepal</label><span>4.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>[Darjeeling] Soom Estate (TGFOP 1), First Flush, India</label><span>5.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>[Darjeeling] Upper Namring Estate (FTGFOP 1), Second Flush, India</label><span>4.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Santosa Estate (BOPS), Indonesia</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Milima Estate (GFBOP 1), Kenya</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Keemun Imperial, Organic, China</label><span>4.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Los Andes Nature Reserve, Organic, (Fanning), Guatemala</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Satemwa Estate (CTC), Malawi</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Lapsang Souchong (Smoked), China</label><span>4.25</span>
-            </li>
-        </ul>
-    <h4>Oolongs</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Finest Grade Formosa, Organic, Taiwan</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Fine Ti Kuan Yin (“Iron Goddess of Mercy”), China</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Tung Ting Jade Formosa, Taiwan</label><span>4.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Wuyi Mountain Milk Oolong, China</label><span>5.25</span>
-            </li>
-        </ul>
-    <h4>Greens</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Jasmine</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Gyokuro Asahina, Extra Fine, Organic, Japan</label><span>6.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Sencha, First Flush (Premium), Japan</label><span>5.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Matcha, Organic Ceremonial Grade</label><span>5.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Genmaicha (“Brown Rice Tea”)</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Fine Lung Ching (“Dragon’s Well”), Organic, China</label><span>4.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Ancient Peaks Mao Feng, Organic, China</label><span>4.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Osprey Gunpowder, Organic, China</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Vietnamese Green Lotus, Vietnam</label><span>3.25</span>
-            </li>
-        </ul>
-    <h4>Whites</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Yin Zhen Silver Needle, China</label><span>6.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Pai Mu Tan White Peony, Organic, China</label><span>5.25</span>
-            </li>
-        </ul>
-    <h4>Pu-Erhs</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Bird's Nest (Aged 5 years), China</label><span>5.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Young, Bold-Leaf Pu-Erh, China</label><span>3.25</span>
-            </li>
-        </ul>
-    <h4>Flavored, Scented, &amp; Blended Teas</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Cocoa Cardamom Tango (Ceylong - Black)</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>The Blanc de Cassis (White Peony)</label><span>4.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Earl Grey de la Creme</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Pomegranate &amp; Rosehips (Ceylon)</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Indian Masala Chai (Assam)</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Moroccan Mint (Green)</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Frankfort Avenue Blend (Blacks)</label><span>4.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Madagascar Vanilla Sunday Blend (Blacks)</label><span>3.25</span>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label>Berry Burst (Green)</label><span>4.25</span>
-            </li>
-        </ul>
-    <h4>Other Teas</h4>
-        <ul>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Rooibos (Caffiene Free African Red Bush)</strong></label> <span>3.25</span> <br>
-                <label>Pure / Orange / Peach / Earl Grey / Sweet Almond / Chai / Lemon Chiffon / Vanilla</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Herbals</strong></label> <span>3.25</span> <br>
-                <label>Spearmint / Peppermint / Chamomile / Lemon-Mango / Hibiscus / Rosebuds / Lavender / Apricot Dream</label>
-            </li>
-            <li>
-                <div class="dotted-bg"></div>    
-                <label><strong>Yerba Mate</strong></label> <span>3.25</span> <br>
-                <label>Yerba Mate / Roasted Mate / Lemon mate / Spearmint Mate</label>
-            </li>
-        </ul>
-    <p>(V) Can Be Made Vegan<br />
-        (GF) Can Be Made Gluten Free</p>
-</div>
-
-    
-<div class="gallery"  id="contact">
-    <div class="horizontal">
-        <span class="line"></span>
-        <div class="textDiv">
-            <div class="textspan">
-                <p class="text">Contact</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="contactForm">
+.gallery {
+    padding: 46px 0 40px 0;
+    margin-top: 0;
+}
+.horizontal {
+    position: relative;
+    clear: both;
+}
+.horizontal .line {
+    border-bottom: 2px solid #c2c2c2;
+    height: 50%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+.textDiv {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+.textspan {
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    padding-top: 2px;
+}
+.horizontal .text {
+    padding: 0 20px;
+    background: #fff;
+    position: relative;
+    font-size: 24px;
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: auto;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+}
 	
-	<form class="form" action="mail.php" method="POST">
+
+footer{
+    font-family:  'Arial', sans-serif;
+    color: #999;
+
+}
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+
+.flex-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+}
 		
-		<p class="name">
-			<input type="text" name="name" id="name" placeholder="John Doe" />
-			<label for="name">Name</label>
-		</p>
-		
-		<p class="email">
-			<input type="text" name="email" id="email" placeholder="mail@example.com" />
-			<label for="email">Email</label>
-		</p>
-		
-		<p class="subject">
-			<input type="text" name="subject" id="subject" placeholder="Take Out" />
-			<label for="subject">Subject</label>
-		</p>		
-	
-		<p class="text">
-			<textarea name="text" placeholder="Write something to us"></textarea>
-		</p>
-		
-		<p class="submit">
-			<input type="submit" value="Send" />
-		</p>
-	</form>
+.flex-item {
+    padding-right: 25px;
+    padding-left: 25px;
+}
 
-</div>
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(124, 84, 154, 0.8) url(cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
 
-
-<footer>
-    
-<div class="flex-container">
-    <div class ="flex-item">
-        <ul style="text-align: center">
-            <li style="font-weight: bold" >HOURS</li>
-            <li>Monday / Friday: 11:00 AM to 10:00 PM</li>
-            <li>Saturday: 11:00 AM to 11:00 PM</li>
-            <li>Sunday: 12:00 PM to 8:00 PM</li>
-        </ul>
-    </div>
-    <div class ="flex-item">
-        <ul style="text-align: center">
-            <li style="font-weight: bold" >PHONE</li>
-            <li>Heart and Soy / Carryout / Catering: 502-452-6678</li>
-            <li>Roots / Reservations: 502-452-6688</li>
-        </ul>
-    </div>
-    <div class ="flex-item">
-        <ul style="text-align: center">
-            <li style="font-weight: bold" >ADDRESS</li>
-            <li>1216 Bardstown Road Louisville, KY 40204</li>
-        </ul>
-    </div>
-</div>
-        
-    <div id="map_canvas"></div>
-    
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
-
-</footer>
-    <a href="#0" class="cd-top">Top</a>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="jquery.flexslider.js"></script>
-    <script type="text/javascript" src="java.js"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="map.js"></script>
-    <script type="text/javascript"> $(window).load(function() {
-    $('.flexslider').flexslider();
-    console.log("my name");
-    });</script>
-</body>
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
 
 
+@media only screen and (max-width: 600px) {
+    .topPicture{
+        background-image:url(Roots-Top-Picture-Mobile.png);
+        min-height: 500px;
+    }
+
+}
 
